@@ -1,0 +1,32 @@
+type Query {
+	authors: [Author]
+	pageAuthors(pageSize: Int!): PageAuthors
+	posts: [Post]
+}
+
+type Mutation {
+	newAuthor(name: String!): Author!
+	newPost(title: String!, content: String!, author: String!): Post!
+}
+
+type Author {
+	id: String!
+	name: String!
+}
+
+type Post {
+	id: String!
+	title: String!
+	content: String!
+	author: Author!
+}
+
+type PageAuthors {
+	authors: [Author!]
+	sort: String
+	pageNumber: Int
+	numberElements: Int
+	numberPages: Int
+	totalElements: Int
+}
+
