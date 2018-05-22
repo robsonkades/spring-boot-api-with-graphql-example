@@ -66,3 +66,14 @@ query findPageAuthors($page: Int!) {
   }
 }
 ```
+
+Variables 
+```
+{
+  "input": "Robson Kadees",
+  "page": 0,
+  "title": "TEste",
+  "content": "jdsaoijdisajdojiasijodas",
+  "mmm": "5001"
+}
+```
